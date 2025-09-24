@@ -1,4 +1,4 @@
-# 🧠 Anxiety Habits Detector
+# 🧠 Lock-In
 
 A real-time computer vision app that detects and alerts you about anxiety-related habits like nail-biting, hair-pulling, face-touching, and skin-picking. Uses MediaPipe and voice alerts to help build awareness and break unwanted behaviors.
 
