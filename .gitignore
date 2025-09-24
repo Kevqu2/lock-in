@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+
+# Data / models (if you add later)
+data/
+checkpoints/
