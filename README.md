@@ -1,18 +1,46 @@
-Anxiety Habits Detector
+# 🧠 Anxiety Habits Detector
 
-A personal prototype to detect anxiety-related habits (like nail-biting, hair-pulling, face-touching, and skin-picking) using AI and real-time camera landmarks.
-The system runs locally, processes face and hand landmarks (no raw video stored), and uses a lightweight ML model to classify short movements as possible habits.
+A real-time computer vision app that detects and alerts you about anxiety-related habits like nail-biting, hair-pulling, face-touching, and skin-picking. Uses MediaPipe and voice alerts to help build awareness and break unwanted behaviors.
 
-Features
+## ✨ Features
 
-Capture webcam sessions with MediaPipe landmarks (hands + face)
+- **Real-time Detection**: Monitors hand-to-face proximity using computer vision
+- **Voice Alerts**: macOS native voice notifications when habits are detected
+- **Background Mode**: Runs discretely with minimal visual interface
+- **Privacy-First**: Only saves landmark coordinates, no images stored
+- **Session Recording**: Track your progress with NDJSON data export
 
-Save sessions as landmarks only (NDJSON format for privacy)
+## 🎮 Controls
 
-Label events (start/end times with habit type)
+| Key | Action |
+|-----|--------|
+| `r` | Start/Stop recording session |
+| `v` | Toggle voice alerts |
+| `c` | Cycle cooldown (5s → 0s → 5s) |
+| `h` | Show help |
+| `q` | Quit |
 
-Convert sessions into training data with simple features
+## 🔬 How It Works
 
-Train baseline models (MLP, GRU, or TCN) on personal data
+The app uses MediaPipe to detect face and hand landmarks, then calculates proximity between them. When your hand stays close to specific face regions for 3+ seconds, it triggers a voice alert:
 
-Run live inference with habit alerts
+- **Mouth/Chin** → Nail biting
+- **Eyes/Forehead** → Hair pulling  
+- **Cheeks/Nose** → Skin picking
+- **Other areas** → Face touching
+
+## 📊 Technical Details
+
+- **30 FPS** real-time processing
+- **3-second minimum** duration to avoid false positives
+- **NDJSON format** for privacy-preserving data recording
+- **macOS voice synthesis** for native alerts
+- **Modular architecture** with separate detection, recording, and display modules
+
+## ⚠️ Disclaimer
+
+This tool is for awareness and educational purposes only. It's not a substitute for professional mental health treatment.
+
+---
+
+**Built with ❤️ for mental health awareness**
