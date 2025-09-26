@@ -36,6 +36,7 @@ The app uses MediaPipe to detect face and hand landmarks, then calculates proxim
 - **NDJSON format** for privacy-preserving data recording
 - **macOS voice synthesis** for native alerts
 - **Modular architecture** with separate detection, recording, and display modules
+- python3 run_detector.py to run it
 
 ## ⚠️ Disclaimer
 
